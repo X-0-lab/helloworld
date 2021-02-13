@@ -1,6 +1,7 @@
 <form method="post" action="/talk/{{ $talk->id }}">
     @csrf
     @method('patch')
+
     <div>
         Title: <input type="text" name="title" value="{{ old('title', $talk->title) }}">
         @error('title'){{ $message }}@enderror

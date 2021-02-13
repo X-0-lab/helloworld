@@ -1,5 +1,6 @@
 <form method="post" action="/talk">
     @csrf
+
     <div>
         Title: <input type="text" name="title" value="{{ old('title') }}">
         @error('title'){{ $message }}@enderror
